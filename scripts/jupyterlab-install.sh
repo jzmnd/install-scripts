@@ -13,6 +13,6 @@
 # - jupyter-console
 # - nbconvert
 # - ipywidgets
-pip install --upgrade jupyter jupyterlab-git jupyterlab_widgets ipympl
+pip install --upgrade jupyter jupyterlab-git jupyterlab_widgets ipympl jupyterlab-code-formatter
 
 jupyter lab build
