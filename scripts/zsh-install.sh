@@ -2,14 +2,14 @@
 # ---------------------------------------------------------------
 # Install ZSH and OMZ
 # By          Jez Smith
-# Tested on   Mac OS X 13.2.1 Apple M1 Pro
+# Tested on   Mac OS X 14.7 Apple M1 Pro
 # ---------------------------------------------------------------
 
 # Install zsh
 brew install zsh zsh-completions
 
 # Install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Make zsh default
 chsh -s $(which zsh)

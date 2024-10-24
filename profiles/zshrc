@@ -71,10 +71,15 @@ ZSH_THEME="agnoster-js"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  aws
   git
   macos
   web-search
   dirhistory
+  colored-man-pages
+  encode64
+  rust
+  python
 )
 
 source $ZSH/oh-my-zsh.sh

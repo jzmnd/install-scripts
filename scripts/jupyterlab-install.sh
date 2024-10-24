@@ -2,13 +2,17 @@
 # ---------------------------------------------------------------
 # Install script for setting up Jupyterlab
 # By          Jez Smith
-# Tested on   Mac OS X 13.2.1 Apple M1 Pro
+# Tested on   Mac OS X 14.7 Apple M1 Pro
 # ---------------------------------------------------------------
 
-pip install --upgrade jupyterlab jupyterlab-git
-
-jupyter labextension install --no-build @jupyter-widgets/jupyterlab-manager
-jupyter labextension install --no-build jupyter-matplotlib
-jupyter labextension install --no-build @jupyterlab/git
+# jupyter metapackage installs
+# - notebook
+# - jupyterlab
+# - ipython
+# - ipykernel
+# - jupyter-console
+# - nbconvert
+# - ipywidgets
+pip install --upgrade jupyter jupyterlab-git jupyterlab_widgets ipympl
 
 jupyter lab build

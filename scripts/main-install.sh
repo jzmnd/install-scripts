@@ -2,7 +2,7 @@
 # ---------------------------------------------------------------
 # Install script for setting up Mac OS X with common tools
 # By          Jez Smith
-# Tested on   Mac OS X 13.2.1 Apple M1 Pro
+# Tested on   Mac OS X 14.7 Apple M1 Pro
 # ---------------------------------------------------------------
 
 # Ask for the administrator password upfront
@@ -24,9 +24,6 @@ fi
 brew update
 brew upgrade
 
-# Make /usr/local/ owned by self
-chown -R $(whoami) /usr/local/
-
 # Install WGET
 brew install wget
 
@@ -47,11 +44,6 @@ brew install git-flow
 pip install virtualenv
 brew install pyenv
 brew install pyenv-virtualenv
-
-# Heroku
-brew install heroku/brew/heroku
-brew install heroku-toolbelt
-heroku update
 
 # GNU tools
 brew install coreutils
@@ -76,6 +68,9 @@ brew install boost
 # Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 rustup-init
+
+# Golang
+brew install go
 
 # Install image software
 brew install gwyddion
@@ -107,6 +102,7 @@ brew install openssl
 # Protobuf
 brew install protobuf
 brew install grpcurl
+brew install bufbuild/buf/buf
 
 # Terraform
 brew tap hashicorp/tap
@@ -117,10 +113,12 @@ brew install p7zip
 brew install xz
 brew install speedtest-cli
 brew install htop
+brew install btop
 brew install tree
 brew install nmap
 brew install hadolint
 brew install hdf5
+brew install poppler
 
 # Cleanup
 brew cleanup -s

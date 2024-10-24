@@ -2,7 +2,7 @@
 # ---------------------------------------------------------------
 # Install script for setting up Mac OS X defaults
 # By          Jez Smith
-# Tested on   Mac OS X 13.2.1 Apple M1 Pro
+# Tested on   Mac OS X 14.7 Apple M1 Pro
 # ---------------------------------------------------------------
 
 # Make ~/Library visible
