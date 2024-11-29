@@ -119,6 +119,7 @@ brew install nmap
 brew install hadolint
 brew install hdf5
 brew install poppler
+brew install rename
 
 # Cleanup
 brew cleanup -s
