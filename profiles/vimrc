@@ -3,7 +3,7 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
-set clipboard+=unnamedplus
+set clipboard+=unnamed
 syntax on
 set number
 set visualbell
