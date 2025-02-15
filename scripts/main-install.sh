@@ -39,6 +39,8 @@ brew install cmake
 # Git
 brew install git
 brew install git-flow
+brew tap b4nst/homebrew-tap
+brew install turbogit
 
 # Virtual envs
 pip install virtualenv
@@ -93,8 +95,7 @@ brew install kafka
 brew install node
 npm install npm@latest -g
 npm install -g n
-npm install -g coffeescript
-npm install -g grunt-cli
+npm install -g typescript
 
 # OpenSSL
 brew install openssl
