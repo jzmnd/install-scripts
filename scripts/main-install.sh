@@ -61,6 +61,7 @@ brew install gawk
 brew install mysql
 brew install postgresql@14
 brew install redis
+curl https://install.duckdb.org | sh
 
 # Install scientific libraries
 brew install fftw
