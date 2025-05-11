@@ -75,7 +75,6 @@ plugins=(
   git
   macos
   web-search
-  dirhistory
   colored-man-pages
   encode64
   rust
@@ -85,6 +84,9 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+
+# Java
+export JAVA_HOME=/opt/homebrew/opt/openjdk@11/libexec/openjdk.jdk/Contents/Home/
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -113,17 +115,18 @@ export HISTFILESIZE="${HISTSIZE}"
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias zshconfig="subl ~/.zshrc"
 
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+alias blender="/Applications/Blender.app/Contents/MacOS/Blender"
+
 alias ls='ls -Gh'
 alias lls='ls -Ghl'
 alias path='echo -e ${PATH//:/\\n}'
 alias now='date +"%T"'
 alias nowdate='date +"%d-%m-%Y"'
+alias epoch='date -Ru -r'
 # Lock the screen
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 # Shortcuts
@@ -142,5 +145,18 @@ prompt_context() {
 }
 
 # pyenv init
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+# duckdb
+export PATH='/Users/jeremysmith/.duckdb/cli/latest':$PATH
+
+# fzf
+source <(fzf --zsh)
+
+function fzfv(){
+  file=$(fzf --preview='bat --color=always --style=numbers --line-range=:500 {}')
+  [ -f "$file" ] && vim $file || true
+}
