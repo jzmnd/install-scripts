@@ -44,8 +44,5 @@ defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
 defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
-# Show Safari debug menu
-defaults write com.apple.Safari IncludeInternalDebugMenu 1
-
 # Restart Finder
 killall Finder, Dock
